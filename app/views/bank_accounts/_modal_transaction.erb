@@ -1,0 +1,36 @@
+<div id="modalTransaction" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">New Transaction</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="notification">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <span class="label">
+              <%= text_field_tag 'input-amount', '$0.00', class: "form-control" %>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <span class="label">
+              <%= select_tag "select-transaction-type", options_for_select(AccountTransaction::TRANSACTION_TYPES), class: "form-control" %>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-primary" id="btn-save">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

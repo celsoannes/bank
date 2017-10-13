@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html style="height: auto; min-height: 100%;">
+  <head>
+    <title>Bank</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="skin-blue sidebar-mini" style="height: auto; min-height: 100%;">
+    <div class="wrapper" style="height: auto; min-height: 100%;">
+      <%= render partial: "shared/header" %>
+      <%= render partial: "shared/sidebar" %>
+
+      <div class="content-wrapper" style="height: auto; min-height: 100%;">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

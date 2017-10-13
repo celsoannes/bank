@@ -1,0 +1,29 @@
+<%= simple_form_for client, defaults: { input_html: { class: 'form-control' } } do |f| %>
+  <div class="row">
+    <div class="col-md-12">
+      <%= f.input :client_number %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :first_name %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :middle_name %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :last_name %>
+    </div>
+  </div>
+  <hr>
+  <div class="form-actions">
+    <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+      <% content_tag(:strong, 'Save Client Record') %>
+    <% end %>
+
+    <% if client.new_record? %>
+      <%= link_to "Cancel", clients_path, :class => "btn btn-default" %>
+    <% else%>
+      <%= link_to "Cancel", client_path(client.id), :class => "btn btn-default" %>
+    <% end %>
+
+  </div>
+<% end %>

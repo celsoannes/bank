@@ -1,0 +1,27 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>New Bank Account</h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <!-- Info boxes -->
+  <div class="box box-primary">
+    <div class="box-body">
+      <%= simple_form_for @bank_account, defaults: { input_html: { class: 'form-control' } } do |f| %>
+        <%= f.input :account_number %>
+        <%= f.association :client %>
+        <%= f.input :balance %>
+        <hr>
+        <div class="form-actions">
+          <%= f.submit :save, class: "btn btn-primary" do Save end %>
+
+          <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+            <% content_tag(:strong, 'Save Bank Account') %>
+          <% end %>
+          <%= link_to "Cancel", root_path, :class => "btn btn-default" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar" style="height: auto;">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu tree" data-widget="tree">
+      <li class="header">MAIN NAVIGATION</li>
+      <li class="<%= params[:controller] == 'clients' ? 'active' : '' %>">
+        <%= link_to clients_path do %>
+        <i class="fa fa-user" ></i><span>Clients</span>
+        <% end %>
+      </li>
+      <li class="<%= params[:controller] == 'bank_accounts' ? 'active' : '' %>">
+        <%= link_to bank_accounts_path do %>
+        <i class="fa fa-money" ></i><span>Bank Accounts</span>
+        <% end %>
+      </li>
+    </ul>
+  </section>
+  <!-- /.sidebar -->
+</aside>

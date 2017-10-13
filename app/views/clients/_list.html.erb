@@ -1,0 +1,20 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Client Number</th>
+      <th>Name</th>
+      <th>Number of Accounts</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% clients.each do |c| %>
+    <tr>
+      <td><%= c.client_number %></td>
+      <td><%= c %></td>
+      <td><%= c.num_accounts %></td>
+      <td><%= link_to "Show", client_path(c.id), :class => "btn btn-primary" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

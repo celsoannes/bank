@@ -1,0 +1,15 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>Clients Database</h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <!-- Info boxes -->
+  <div class="box box-primary">
+    <div class="box-body">
+      <%= link_to "New Client", new_client_path, :class => "btn btn-primary"  %>
+      <%= render partial: "list", locals: {clients: @clients }  %>
+    </div>
+  </div>
+</section>
